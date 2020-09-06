@@ -31,7 +31,7 @@ extension UIButton {
     }
     
     
-    convenience init(image: UIImage, tintColor: UIColor? = nil, target: Any? = nil, action: Selector? = nil) {
+    convenience public init(image: UIImage, tintColor: UIColor? = nil, target: Any? = nil, action: Selector? = nil) {
         self.init(type: .system)
         
         if tintColor == nil {
