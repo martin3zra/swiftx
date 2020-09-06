@@ -10,7 +10,7 @@ import UIKit
 extension UIView {
 
 
-    open func add(_ views :UIView...) {
+    public func add(_ views :UIView...) {
         views.forEach({addSubview($0)})
     }
 
