@@ -7,9 +7,10 @@
 
 import UIKit
 
+@available(iOS 11.0, tvOS 11.0, *)
 extension UIViewController {
 
-    func add(_ child: UIViewController, _ viewHolder: UIView? = nil) {
+    public func add(_ child: UIViewController, _ viewHolder: UIView? = nil) {
 
         addChild(child)
 
@@ -22,7 +23,7 @@ extension UIViewController {
         child.didMove(toParent: self)
     }
 
-    func remove() {
+    public func remove() {
 
         guard self.parent != nil else { return }
 
