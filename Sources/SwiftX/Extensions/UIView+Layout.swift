@@ -64,6 +64,13 @@ extension UIView {
     }
 
     @discardableResult
+    open func withWidth(_ layout: NSLayoutDimension, multiplier: CGFloat = 1) -> UIView {
+        translatesAutoresizingMaskIntoConstraints = false
+        widthAnchor.constraint(equalTo: layout, multiplier: multiplier).isActive = true
+        return self
+    }
+
+    @discardableResult
     func withBorder<T: UIView>(width: CGFloat, color: UIColor) -> T {
         layer.borderWidth = width
         layer.borderColor = color.cgColor
