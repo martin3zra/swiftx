@@ -7,6 +7,6 @@
 
 import Foundation
 
-func dispatch(name: NSNotification.Name, object: Any? = nil) {
+open func dispatch(name: NSNotification.Name, object: Any? = nil) {
     NotificationCenter.default.post(name: name, object: object)
 }
