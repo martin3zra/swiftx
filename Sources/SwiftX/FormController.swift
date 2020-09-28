@@ -11,8 +11,8 @@ import UIKit
 @available(iOS 11.1, tvOS 11.0, *)
 open class FormController: UIViewController {
 
-    var lowestElement: UIView!
-    var lastKnownOrigin: CGPoint = .zero
+    public var lowestElement: UIView!
+    public var lastKnownOrigin: CGPoint = .zero
 
     fileprivate let alignment: alignment
 
