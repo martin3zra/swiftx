@@ -96,12 +96,12 @@ public class FormInput: UIView, UITextFieldDelegate {
         return true
     }
 
-    func textFieldDidBeginEditing(_ textField: UITextField) {
+    public func textFieldDidBeginEditing(_ textField: UITextField) {
         markWithColor(color: colorOnDidFocus)
         delegate?.onDidEdit(textField: textField, status: .begin)
     }
 
-    func textFieldDidEndEditing(_ textField: UITextField) {
+    public func textFieldDidEndEditing(_ textField: UITextField) {
         markWithColor(color: colorOnDidLostFocus)
         delegate?.onDidEdit(textField: textField, status: .end)
     }
