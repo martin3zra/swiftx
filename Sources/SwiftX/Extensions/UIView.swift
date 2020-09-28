@@ -48,5 +48,26 @@ extension UIView {
 
         addSubview(border)
     }
+
+    public var id: String? {
+        get {
+            return self.accessibilityIdentifier
+        }
+        set {
+            self.accessibilityIdentifier = newValue
+        }
+    }
+
+    public func view(withId id: String) -> UIView? {
+        if self.id == id {
+            return self
+        }
+        for view in self.subviews {
+            if let view = view.view(withId: id) {
+                return view
+            }
+        }
+        return nil
+    }
 }
 #endif
