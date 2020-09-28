@@ -5,15 +5,15 @@
 //  Created by Alfredo Martinez on 9/28/20.
 //
 
-
 #if !os(macOS)
 import UIKit
 
 @available(iOS 11.1, tvOS 11.0, *)
-open protocol FormInputEditingDelegate: class {
+public protocol FormInputEditingDelegate: class {
     func onDidEdit(textField: UITextField, status: FormInput.EditStatus)
 }
 
+@available(iOS 11.1, tvOS 11.0, *)
 public class FormInput: UIView, UITextFieldDelegate {
 
     public enum EditStatus {
