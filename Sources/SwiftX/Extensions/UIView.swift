@@ -22,5 +22,31 @@ extension UIView {
             layer.cornerRadius = cornerRadius
         }
     }
+
+    public func addBorder(edge: UIRectEdge, color: UIColor, thickness: CGFloat, withID identifier: String? = nil) {
+
+        let border = UIView()
+        border.id = identifier
+        border.backgroundColor = color
+
+        switch edge {
+        case .top:
+            border.autoresizingMask = [.flexibleWidth, .flexibleBottomMargin]
+            border.frame = .init(x: 0, y: 0, width: frame.size.width, height: thickness)
+        case .bottom:
+            border.autoresizingMask = [.flexibleWidth, .flexibleTopMargin]
+            border.frame = .init(x: 0, y: frame.size.height - thickness, width: frame.size.width, height: thickness)
+        case .left:
+            border.frame = .init(x: 0, y: 0, width: thickness, height: frame.size.height)
+            border.autoresizingMask = [.flexibleHeight, .flexibleRightMargin]
+        case .right:
+            border.autoresizingMask = [.flexibleHeight, .flexibleLeftMargin]
+            border.frame = .init(x: frame.size.width - thickness, y: 0, width: thickness, height: frame.size.height)
+        default:
+            break
+        }
+
+        addSubview(border)
+    }
 }
 #endif
