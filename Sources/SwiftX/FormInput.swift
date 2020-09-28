@@ -21,9 +21,9 @@ public class FormInput: UIView, UITextFieldDelegate {
     }
 
     weak public var delegate: FormInputEditingDelegate?
-    public let label = UILabel(font: .p14(.medium), textColor: .color5)
-    public let textField = UITextField(backgroundColor: .clear)
-    private let errorLabel = UILabel(font: .p12, textColor: .red, alignment: .left, numberOfLines: 1)
+    public let label = UILabel()
+    public let textField = UITextField()
+    private let errorLabel = UILabel()
 
     public var colorOnDidFocus: UIColor = .black
     public var colorOnDidLostFocus: UIColor = .gray
@@ -48,6 +48,16 @@ public class FormInput: UIView, UITextFieldDelegate {
 
     required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    public func applyLabelAppearance(withFont font: UIFont = .systemFont(ofSize: 12), textColor: UIColor = .black, alignment: NSTextAlign = .left) {
+        label.font = font
+        label.textColor = textColor
+        label.textAlignment = alignment
+    }
+
+    public func applyTextFieldAppearance() {
+        textField.backgroundColor = .clear
     }
 
     public func configureAccessoryView(text: String = "Done", style: UIBarButtonItem.Style = .done, target: Any, action: Selector, tag: Int = 0) {
