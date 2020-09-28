@@ -76,7 +76,7 @@ public class FormInput: UIView, UITextFieldDelegate {
         textField.inputAccessoryView = doneToolbar
     }
 
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+    public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
 
         //If the text field is numeric
         if textField.keyboardType != .numberPad { return true }
