@@ -8,7 +8,7 @@
 #if !os(macOS)
 import UIKit
 
-@available(iOS 11.0, tvOS 11.0, *)
+@available(iOS 11.1, tvOS 11.0, *)
 open class FormController: UIViewController {
 
     var lowestElement: UIView!
@@ -21,7 +21,7 @@ open class FormController: UIViewController {
         super.init(nibName: nil, bundle: nil)
     }
 
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
@@ -42,7 +42,7 @@ open class FormController: UIViewController {
         return sv
     }()
 
-    override func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = .white
