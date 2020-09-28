@@ -50,7 +50,7 @@ public class FormInput: UIView, UITextFieldDelegate {
         fatalError("init(coder:) has not been implemented")
     }
 
-    public func applyLabelAppearance(withFont font: UIFont = .systemFont(ofSize: 12), textColor: UIColor = .black, alignment: NSTextAlign = .left) {
+    public func applyLabelAppearance(withFont font: UIFont = .systemFont(ofSize: 12), textColor: UIColor = .black, alignment: NSTextAlignment = .left) {
         label.font = font
         label.textColor = textColor
         label.textAlignment = alignment
