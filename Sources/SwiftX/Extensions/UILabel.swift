@@ -6,8 +6,10 @@
 //  Created by Alfredo Martinez on 6/23/20.
 //
 
+#if !os(macOS)
 import UIKit
 
+@available(iOS 11.0, tvOS 11.0, *)
 extension UILabel {
     convenience public init(
         text: String? = nil,
@@ -37,3 +39,4 @@ extension UILabel {
         attributedText = customizedText
     }
 }
+#endif

@@ -5,8 +5,10 @@
 //  Created by Alfredo Martinez on 9/5/20.
 //
 
+#if !os(macOS)
 import UIKit
 
+@available(iOS 11.0, tvOS 11.0, *)
 extension CGFloat {
 
     public static var padding: UIEdgeInsets {
@@ -21,4 +23,5 @@ extension CGFloat {
         of * value
     }
 }
+#endif
 

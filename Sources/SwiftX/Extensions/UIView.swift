@@ -4,12 +4,12 @@
 //
 //  Created by Alfredo Martinez on 9/5/20.
 //
-
+#if !os(macOS)
 import UIKit
 
+@available(iOS 11.0, tvOS 11.0, *)
 extension UIView {
-
-
+    
     public func add(_ views :UIView...) {
         views.forEach({addSubview($0)})
     }
@@ -23,3 +23,4 @@ extension UIView {
         }
     }
 }
+#endif
