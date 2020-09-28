@@ -9,7 +9,7 @@
 import UIKit
 
 @available(iOS 11.0, tvOS 11.0, *)
-class FormController: UIViewController {
+open class FormController: UIViewController {
 
     var lowestElement: UIView!
     var lastKnownOrigin: CGPoint = .zero
