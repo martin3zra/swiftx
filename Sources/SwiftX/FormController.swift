@@ -16,7 +16,7 @@ open class FormController: UIViewController {
 
     fileprivate let alignment: alignment
 
-    init(alignment: alignment = .top) {
+    public init(alignment: alignment = .top) {
         self.alignment = alignment
         super.init(nibName: nil, bundle: nil)
     }
