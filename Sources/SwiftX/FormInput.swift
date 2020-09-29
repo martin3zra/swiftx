@@ -64,11 +64,11 @@ public class FormInput: UIView, UITextFieldDelegate {
         textField.backgroundColor = color
     }
 
-    public func applyErrorLabelAppearance(withFont font: UIFont? = .systemFont(ofSize: 12), textColor: UIColor = .black, alignment: NSTextAlignment = .left, numberOfLines: CGFloat = 1) {
+    public func applyErrorLabelAppearance(withFont font: UIFont? = .systemFont(ofSize: 12), textColor: UIColor = .black, alignment: NSTextAlignment = .left, numberOfLines: Int = 1) {
         errorLabel.font = font
         errorLabel.textColor = textColor
         errorLabel.textAlignment = alignment
-        errorLabel.numberOfLine = numberOfLines
+        errorLabel.numberOfLines = numberOfLines
     }
 
     public func configureAccessoryView(text: String = "Done", style: UIBarButtonItem.Style = .done, target: Any, action: Selector, tag: Int = 0) {
