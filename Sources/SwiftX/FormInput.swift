@@ -64,6 +64,13 @@ public class FormInput: UIView, UITextFieldDelegate {
         textField.backgroundColor = color
     }
 
+    public func applyErrorLabelAppearance(withFont font: UIFont? = .systemFont(ofSize: 12), textColor: UIColor = .black, alignment: NSTextAlignment = .left, numberOfLines: CGFloat = 1) {
+        errorLabel.font = font
+        errorLabel.textColor = textColor
+        errorLabel.textAlignment = alignment
+        errorLabel.numberOfLine = numberOfLines
+    }
+
     public func configureAccessoryView(text: String = "Done", style: UIBarButtonItem.Style = .done, target: Any, action: Selector, tag: Int = 0) {
         let doneToolbar: UIToolbar = UIToolbar(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 50))
         doneToolbar.barStyle = .default
