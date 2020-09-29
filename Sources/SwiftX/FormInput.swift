@@ -43,11 +43,15 @@ public class FormInput: UIView, UITextFieldDelegate {
         textField.delegate = self
 
         self.maxValue = maxValue
-        textField.addBorder(edge: .bottom, color: colorOnDidLostFocus, thickness: 1, withID: label.text?.convertedToSlug())
     }
 
     required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    public func withBorder(thickness: CGFloat = 1) {
+
+        textField.addBorder(edge: .bottom, color: colorOnDidLostFocus, thickness: thickness, withID: label.text?.convertedToSlug())
     }
 
     public func applyLabelAppearance(withFont font: UIFont? = .systemFont(ofSize: 12), textColor: UIColor = .black, alignment: NSTextAlignment = .left) {
