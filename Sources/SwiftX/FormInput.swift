@@ -56,8 +56,8 @@ public class FormInput: UIView, UITextFieldDelegate {
         label.textAlignment = alignment
     }
 
-    public func applyTextFieldAppearance() {
-        textField.backgroundColor = .clear
+    public func applyTextFieldAppearance(backgroundColor color: UIColor = .clear) {
+        textField.backgroundColor = color
     }
 
     public func configureAccessoryView(text: String = "Done", style: UIBarButtonItem.Style = .done, target: Any, action: Selector, tag: Int = 0) {
